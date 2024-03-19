@@ -14,6 +14,7 @@ dotenv.config();
 
 // connecting backend to the database (mongoose)
 const url = process.env.MONGODB_CONNECTION_STRING;
+const port = process.env.PORT || 3000;
 mongoose
   .connect(url)
   .then(() => console.log('successfully connected to the database'))
@@ -41,6 +42,6 @@ app.post('/createTask', async (req, res) => {
 });
 
 // start of the application
-app.listen('3001', () => {
-  console.log('Server is Started Successfully');
+app.listen(port, () => {
+  console.log(`Server is Started Successfully at ${port}`);
 });

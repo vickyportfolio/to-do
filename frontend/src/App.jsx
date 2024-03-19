@@ -5,22 +5,22 @@ function App() {
   const [tasks, setTask] = useState([]);
   const [input, setInput] = useState('');
 
-  // useEffect(() => {
-  //   axios
-  //     .get('http://localhost:3001/getTasks')
-  //     .then((res) => {
-  //       setTask(res.data);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get('https://to-do-backend-9n7d.onrender.com/getTasks')
+      .then((res) => {
+        setTask(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const addTask = (event) => {
     event.preventDefault();
+    setTask([...tasks, { task: input }]);
+    setInput('');
     axios
-      .post('http://localhost:3001/createTask', { task: input })
-      .then((res) => {
-        setTask([...tasks, { task: input }]);
-        console.log(tasks);
+      .post('https://to-do-backend-9n7d.onrender.com/createTask', {
+        task: input,
       })
       .catch((err) => console.log(err));
   };
