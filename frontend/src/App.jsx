@@ -5,18 +5,17 @@ function App() {
   const [tasks, setTask] = useState([]);
   const [input, setInput] = useState('');
 
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/getTasks')
-      .then((res) => {
-        setTask(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get('http://localhost:3001/getTasks')
+  //     .then((res) => {
+  //       setTask(res.data);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   const addTask = (event) => {
     event.preventDefault();
-    console.log(input);
     axios
       .post('http://localhost:3001/createTask', { task: input })
       .then((res) => {
