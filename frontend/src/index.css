@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-inline: 1.5rem;
 }
 
 .todo-container h1 {
@@ -21,7 +22,6 @@
 
 .todo-container input {
   padding: 0.5rem;
-  width: 380px;
 }
 .todo-container .addBtn {
   padding: 0.5rem;
@@ -35,14 +35,18 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 380px;
+  width: 80vw;
   border-bottom: 2px solid orange;
   padding: 1rem;
 }
-/* 
-.todo-container-list button {
-  padding: 0.5rem;
-  background-color: greenyellow;
-  border: 2px solid rgb(49, 255, 83);
-  right: 0;
-} */
+
+/* media query */
+
+@media (min-width: 720px) {
+  .todo-container-list div {
+    width: 40vw;
+  }
+  .todo-container input {
+    width: 300px;
+  }
+}
