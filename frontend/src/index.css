@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo-container h1 {
+  font-family: cursive;
+}
+.todo-container form {
+  margin-block: 1rem;
+}
+
+.todo-container input {
+  padding: 0.5rem;
+  width: 380px;
+}
+.todo-container .addBtn {
+  padding: 0.5rem;
+  background-color: greenyellow;
+  border: 2px solid rgb(49, 255, 83);
+}
+.todo-container-list {
+  box-shadow: 0px 0px 6px 7px orange;
+}
+.todo-container-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 380px;
+  border-bottom: 2px solid orange;
+  padding: 1rem;
+}
+/* 
+.todo-container-list button {
+  padding: 0.5rem;
+  background-color: greenyellow;
+  border: 2px solid rgb(49, 255, 83);
+  right: 0;
+} */
