@@ -33,7 +33,7 @@ function App() {
           type="text"
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          placeholder="Enter Task for better future..."
+          placeholder="Enter Task for better future...."
         />
         <button className="addBtn">Add Task</button>
       </form>
